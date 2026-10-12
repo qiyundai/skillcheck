@@ -1,0 +1,58 @@
+{
+  "name": "skillcheck",
+  "displayName": "Skillcheck",
+  "description": "Check agent instructions with exact source evidence",
+  "version": "0.1.0",
+  "publisher": "skillcheck-local",
+  "private": true,
+  "engines": {
+    "vscode": "^1.95.0"
+  },
+  "categories": [
+    "Linters"
+  ],
+  "activationEvents": [
+    "workspaceContains:**/SKILL.md",
+    "workspaceContains:skillcheck.config.json",
+    "onCommand:skillcheck.recheck"
+  ],
+  "main": "dist/extension.cjs",
+  "contributes": {
+    "commands": [
+      {
+        "command": "skillcheck.recheck",
+        "title": "Skillcheck: Recheck Workspace"
+      },
+      {
+        "command": "skillcheck.diff",
+        "title": "Skillcheck: Show Diff against Git Baseline"
+      }
+    ],
+    "configuration": {
+      "title": "Skillcheck",
+      "properties": {
+        "skillcheck.baseline": {
+          "type": "string",
+          "default": "HEAD",
+          "description": "Git baseline used for instruction comparisons."
+        },
+        "skillcheck.allowCloudAnalysis": {
+          "type": "boolean",
+          "default": false,
+          "scope": "application",
+          "description": "Allow semantic editor analysis to transmit original and unsaved instructions to TypeSafe. Repository configuration must also enable semantic analysis. Restart the extension after changing this."
+        }
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qiyundai/skillcheck.git"
+  },
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": false,
+      "description": "Skillcheck reads repository instructions; enable it only in a trusted workspace."
+    }
+  }
+}

@@ -1,0 +1,49 @@
+name: Skillcheck
+description: Run deterministic instruction checks and upload source-backed reports.
+inputs:
+  tool:
+    description: Path to the repository's installed standalone executable
+    default: .skillcheck/tool/skillcheck.mjs
+  base:
+    description: Optional Git baseline; blank scans the working tree
+    default: ''
+  head:
+    description: Git head for comparisons
+    default: HEAD
+  report-directory:
+    description: Directory for JSON and Markdown reports
+    default: .skillcheck/reports
+runs:
+  using: composite
+  steps:
+    - name: Analyze instructions
+      id: scan
+      shell: bash
+      env:
+        SKILLCHECK_TOOL: ${{ inputs.tool }}
+        SKILLCHECK_BASE: ${{ inputs.base }}
+        SKILLCHECK_HEAD: ${{ inputs.head }}
+        SKILLCHECK_REPORT_DIR: ${{ inputs.report-directory }}
+      run: |
+        mkdir -p "$SKILLCHECK_REPORT_DIR"
+        status=0
+        if [ -n "$SKILLCHECK_BASE" ]; then
+          node "$SKILLCHECK_TOOL" diff --base "$SKILLCHECK_BASE" --head "$SKILLCHECK_HEAD" --merge-base --deterministic --format json --output "$SKILLCHECK_REPORT_DIR/report.json" || status=$?
+        else
+          node "$SKILLCHECK_TOOL" scan --deterministic --format json --output "$SKILLCHECK_REPORT_DIR/report.json" || status=$?
+        fi
+        node "$SKILLCHECK_TOOL" report --input "$SKILLCHECK_REPORT_DIR/report.json" --format markdown --output "$SKILLCHECK_REPORT_DIR/report.md"
+        cat "$SKILLCHECK_REPORT_DIR/report.md" >> "$GITHUB_STEP_SUMMARY"
+        echo "exit_code=$status" >> "$GITHUB_OUTPUT"
+    - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
+      if: always()
+      with:
+        name: skillcheck-report
+        include-hidden-files: true
+        if-no-files-found: error
+        path: ${{ inputs.report-directory }}/
+    - name: Apply analysis result
+      shell: bash
+      env:
+        SKILLCHECK_EXIT: ${{ steps.scan.outputs.exit_code }}
+      run: exit "$SKILLCHECK_EXIT"

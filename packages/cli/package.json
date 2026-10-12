@@ -1,0 +1,19 @@
+{
+  "name": "@skillcheck/cli",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Source-backed checks and semantic diffs for agent skill libraries",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "skillcheck": "dist/skillcheck.mjs"
+  },
+  "files": [
+    "dist",
+    "assets",
+    "README.md",
+    "LICENSE"
+  ]
+}

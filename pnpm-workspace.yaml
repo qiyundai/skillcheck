@@ -1,0 +1,7 @@
+packages:
+  - packages/*
+allowBuilds:
+  esbuild: true
+  '@vscode/vsce-sign': false
+minimumReleaseAgeExclude:
+  - zod@4.6.6

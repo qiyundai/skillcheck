@@ -1,0 +1,49 @@
+{
+  "name": "skillcheck-workspace",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.9.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "check": "pnpm typecheck && pnpm test && pnpm build",
+    "skillcheck": "node packages/cli/dist/skillcheck.mjs",
+    "pack:cli": "pnpm build && pnpm --dir packages/cli pack --pack-destination ../../artifacts",
+    "fixtures:recorded": "node scripts/generate-fixtures.mjs",
+    "pack:vscode": "pnpm build && pnpm --dir packages/vscode exec vsce package --no-dependencies --allow-missing-repository --out ../../artifacts/skillcheck-0.1.0.vsix",
+    "smoke:package": "node scripts/smoke-package.mjs"
+  },
+  "devDependencies": {
+    "@types/mdast": "^4.0.0",
+    "@types/node": "^24.0.0",
+    "@types/vscode": "^1.95.0",
+    "@vscode/vsce": "4.0.0",
+    "esbuild": "0.28.2",
+    "typescript": "7.0.2",
+    "vitest": "5.0.3",
+    "@types/picomatch": "4.0.3"
+  },
+  "dependencies": {
+    "remark-frontmatter": "5.0.0",
+    "remark-parse": "11.0.0",
+    "unified": "11.0.5",
+    "vscode-languageclient": "10.1.2",
+    "vscode-languageserver": "10.1.2",
+    "vscode-languageserver-textdocument": "1.0.12",
+    "yaml": "2.9.1",
+    "zod": "4.6.6",
+    "picomatch": "4.0.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qiyundai/skillcheck.git"
+  },
+  "bugs": {
+    "url": "https://github.com/qiyundai/skillcheck/issues"
+  }
+}

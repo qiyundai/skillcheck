@@ -1,0 +1,9 @@
+[
+  {
+    "scenarioId": "temporary-delete",
+    "runId": "mock-1",
+    "harnessVersion": "mock/1",
+    "executionModel": "deterministic-fixture/1",
+    "calls": [{ "tool": "delete_file", "arguments": { "path": "temporary.txt" }, "authorized": true }]
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "provider": {
+    "name": "recorded",
+    "model": "recorded-v1",
+    "recordings": "fixtures/semantic/recordings.json"
+  },
+  "semantic": {
+    "enabled": true
+  }
+}

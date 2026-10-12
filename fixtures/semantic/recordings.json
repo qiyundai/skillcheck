@@ -1,0 +1,307 @@
+[
+  {
+    "requestFingerprint": "7130ead379eeafa0f0c5ad18f32414cdc3ffb45f12af9809e601001f4e6b2e5a",
+    "result": {
+      "label": "weakened",
+      "probabilities": {
+        "equivalent": 0,
+        "strengthened": 0,
+        "weakened": 1,
+        "scope_changed": 0,
+        "incompatible": 0,
+        "mixed": 0,
+        "unrelated": 0,
+        "uncertain": 0
+      },
+      "provider": "recorded",
+      "requestedModel": "recorded-v1",
+      "resolvedModel": "recorded-v1",
+      "rubricVersion": "skillcheck-relations/1"
+    }
+  },
+  {
+    "requestFingerprint": "b4e5099428da6a1635e9ac09057792970febc488b0979dbcb99374eb9496d781",
+    "result": {
+      "label": "strengthened",
+      "probabilities": {
+        "equivalent": 0,
+        "strengthened": 1,
+        "weakened": 0,
+        "scope_changed": 0,
+        "incompatible": 0,
+        "mixed": 0,
+        "unrelated": 0,
+        "uncertain": 0
+      },
+      "provider": "recorded",
+      "requestedModel": "recorded-v1",
+      "resolvedModel": "recorded-v1",
+      "rubricVersion": "skillcheck-relations/1"
+    }
+  },
+  {
+    "requestFingerprint": "fb879b099ae77c7c023cd69d6c19319a5e9e033ea293aa6a52396299b36205a7",
+    "result": {
+      "label": "equivalent",
+      "probabilities": {
+        "equivalent": 1,
+        "strengthened": 0,
+        "weakened": 0,
+        "scope_changed": 0,
+        "incompatible": 0,
+        "mixed": 0,
+        "unrelated": 0,
+        "uncertain": 0
+      },
+      "provider": "recorded",
+      "requestedModel": "recorded-v1",
+      "resolvedModel": "recorded-v1",
+      "rubricVersion": "skillcheck-relations/1"
+    }
+  },
+  {
+    "requestFingerprint": "589de4b318ba7d9d130c3629532eed0d2ff3473c4578947488139d56d8ff7fa8",
+    "result": {
+      "label": "scope_changed",
+      "probabilities": {
+        "equivalent": 0,
+        "strengthened": 0,
+        "weakened": 0,
+        "scope_changed": 1,
+        "incompatible": 0,
+        "mixed": 0,
+        "unrelated": 0,
+        "uncertain": 0
+      },
+      "provider": "recorded",
+      "requestedModel": "recorded-v1",
+      "resolvedModel": "recorded-v1",
+      "rubricVersion": "skillcheck-relations/1"
+    }
+  },
+  {
+    "requestFingerprint": "4e34ceb4d85b7883b3e11be4953510bc400c01ad354a70a59dd36a8b860a7501",
+    "result": {
+      "label": "mixed",
+      "probabilities": {
+        "equivalent": 0,
+        "strengthened": 0,
+        "weakened": 0,
+        "scope_changed": 0,
+        "incompatible": 0,
+        "mixed": 1,
+        "unrelated": 0,
+        "uncertain": 0
+      },
+      "provider": "recorded",
+      "requestedModel": "recorded-v1",
+      "resolvedModel": "recorded-v1",
+      "rubricVersion": "skillcheck-relations/1"
+    }
+  },
+  {
+    "requestFingerprint": "16c3b5167173cd4c8b5866ed56e7489d196dead51564a05036b1add634883b9e",
+    "result": {
+      "label": "incompatible",
+      "probabilities": {
+        "equivalent": 0,
+        "strengthened": 0,
+        "weakened": 0,
+        "scope_changed": 0,
+        "incompatible": 1,
+        "mixed": 0,
+        "unrelated": 0,
+        "uncertain": 0
+      },
+      "provider": "recorded",
+      "requestedModel": "recorded-v1",
+      "resolvedModel": "recorded-v1",
+      "rubricVersion": "skillcheck-relations/1"
+    }
+  },
+  {
+    "requestFingerprint": "b5d1529d5eea60937cd82aafc6385271bf43e887836bec270067f7417869bc5e",
+    "result": {
+      "label": "unrelated",
+      "probabilities": {
+        "equivalent": 0,
+        "strengthened": 0,
+        "weakened": 0,
+        "scope_changed": 0,
+        "incompatible": 0,
+        "mixed": 0,
+        "unrelated": 1,
+        "uncertain": 0
+      },
+      "provider": "recorded",
+      "requestedModel": "recorded-v1",
+      "resolvedModel": "recorded-v1",
+      "rubricVersion": "skillcheck-relations/1"
+    }
+  },
+  {
+    "requestFingerprint": "eb386e710dd3a499ca31100e4132e8dc509d151b856be9c45674b63cbaf72dc3",
+    "result": {
+      "label": "uncertain",
+      "probabilities": {
+        "equivalent": 0,
+        "strengthened": 0,
+        "weakened": 0,
+        "scope_changed": 0,
+        "incompatible": 0,
+        "mixed": 0,
+        "unrelated": 0,
+        "uncertain": 1
+      },
+      "provider": "recorded",
+      "requestedModel": "recorded-v1",
+      "resolvedModel": "recorded-v1",
+      "rubricVersion": "skillcheck-relations/1"
+    }
+  },
+  {
+    "requestFingerprint": "73e316d47323ad60e96374920839266289aa93e1422be5d900e4b69629d82418",
+    "result": {
+      "label": "potential_conflict",
+      "probabilities": {
+        "compatible": 0,
+        "potential_conflict": 1,
+        "scoped_exception": 0,
+        "resolved_by_precedence": 0,
+        "uncertain": 0
+      },
+      "provider": "recorded",
+      "requestedModel": "recorded-v1",
+      "resolvedModel": "recorded-v1",
+      "rubricVersion": "skillcheck-relations/1"
+    }
+  },
+  {
+    "requestFingerprint": "f83aba2c89ce9bb4976f8d7e664dd5cbaf8e90cd9dddd70ec84c098890d34fa1",
+    "result": {
+      "label": "scoped_exception",
+      "probabilities": {
+        "compatible": 0,
+        "potential_conflict": 0,
+        "scoped_exception": 1,
+        "resolved_by_precedence": 0,
+        "uncertain": 0
+      },
+      "provider": "recorded",
+      "requestedModel": "recorded-v1",
+      "resolvedModel": "recorded-v1",
+      "rubricVersion": "skillcheck-relations/1"
+    }
+  },
+  {
+    "requestFingerprint": "3cc13be9a3416f0476471570aaeac229e107308b89fe040fb76350012bac61bc",
+    "result": {
+      "label": "compatible",
+      "probabilities": {
+        "compatible": 1,
+        "potential_conflict": 0,
+        "scoped_exception": 0,
+        "resolved_by_precedence": 0,
+        "uncertain": 0
+      },
+      "provider": "recorded",
+      "requestedModel": "recorded-v1",
+      "resolvedModel": "recorded-v1",
+      "rubricVersion": "skillcheck-relations/1"
+    }
+  },
+  {
+    "requestFingerprint": "dc49b0b3cacdf9049abbe04e5d44a1fab877bc5c7d738a0c2d1f35d7b78a55cb",
+    "result": {
+      "label": "uncertain",
+      "probabilities": {
+        "compatible": 0,
+        "potential_conflict": 0,
+        "scoped_exception": 0,
+        "resolved_by_precedence": 0,
+        "uncertain": 1
+      },
+      "provider": "recorded",
+      "requestedModel": "recorded-v1",
+      "resolvedModel": "recorded-v1",
+      "rubricVersion": "skillcheck-relations/1"
+    }
+  },
+  {
+    "requestFingerprint": "17ff7d24bddcc5b07c7a223f6776616ff851148c0d3f9e86e6d72d170b3606a8",
+    "result": {
+      "label": "equivalent",
+      "probabilities": {
+        "equivalent": 1,
+        "strengthened": 0,
+        "weakened": 0,
+        "scope_changed": 0,
+        "incompatible": 0,
+        "mixed": 0,
+        "unrelated": 0,
+        "uncertain": 0
+      },
+      "provider": "recorded",
+      "requestedModel": "recorded-v1",
+      "resolvedModel": "recorded-v1",
+      "rubricVersion": "skillcheck-relations/1"
+    }
+  },
+  {
+    "requestFingerprint": "eb2b035ba822b5c084b0906332675fa9b3926aec47321279e2babd82743f7229",
+    "result": {
+      "label": "scope_changed",
+      "probabilities": {
+        "equivalent": 0,
+        "strengthened": 0,
+        "weakened": 0,
+        "scope_changed": 1,
+        "incompatible": 0,
+        "mixed": 0,
+        "unrelated": 0,
+        "uncertain": 0
+      },
+      "provider": "recorded",
+      "requestedModel": "recorded-v1",
+      "resolvedModel": "recorded-v1",
+      "rubricVersion": "skillcheck-relations/1"
+    }
+  },
+  {
+    "requestFingerprint": "3abf83aa4ec7a36cde4ccb536586cc0be64bd119f0df9a5a482d876dbd787878",
+    "result": {
+      "label": "weakened",
+      "probabilities": {
+        "equivalent": 0,
+        "strengthened": 0,
+        "weakened": 1,
+        "scope_changed": 0,
+        "incompatible": 0,
+        "mixed": 0,
+        "unrelated": 0,
+        "uncertain": 0
+      },
+      "provider": "recorded",
+      "requestedModel": "recorded-v1",
+      "resolvedModel": "recorded-v1",
+      "rubricVersion": "skillcheck-relations/1"
+    }
+  },
+  {
+    "requestFingerprint": "ec875dc02eba389c11c2d39800ceb67c1b8cdf0745f71bb57b8d3d4d1a675d2b",
+    "result": {
+      "label": "scoped_exception",
+      "probabilities": {
+        "compatible": 0,
+        "potential_conflict": 0,
+        "scoped_exception": 1,
+        "resolved_by_precedence": 0,
+        "uncertain": 0
+      },
+      "provider": "recorded",
+      "requestedModel": "recorded-v1",
+      "resolvedModel": "recorded-v1",
+      "rubricVersion": "skillcheck-relations/1"
+    }
+  }
+]

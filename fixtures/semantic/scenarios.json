@@ -1,0 +1,10 @@
+[
+  {
+    "id": "temporary-delete",
+    "compositionId": "cleanup",
+    "instructionPaths": ["skills/cleanup/SKILL.md"],
+    "taskInput": "Create and remove a temporary file.",
+    "mockEnvironment": { "filesystem": "in-memory" },
+    "assertions": [{ "tool": "delete_file", "minCalls": 1, "requiresAuthorization": true }]
+  }
+]

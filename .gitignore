@@ -1,0 +1,14 @@
+node_modules/
+**/dist/
+artifacts/
+.skillcheck/cache/
+coverage/
+*.vsix
+.skillcheck/reports/
+.skillcheck/generate-fixtures.mjs
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store

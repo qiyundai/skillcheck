@@ -1,0 +1,3 @@
+import { defineConfig } from 'vitest/config';
+import { fileURLToPath } from 'node:url';
+export default defineConfig({plugins:[{name:'markdown-text',enforce:'pre',transform(code,id){if(id.endsWith('.md'))return {code:'export default '+JSON.stringify(code),map:null};return undefined;}}],resolve:{alias:{'@skillcheck/core':fileURLToPath(new URL('./packages/core/src/index.ts',import.meta.url)),'@skillcheck/providers':fileURLToPath(new URL('./packages/providers/src/index.ts',import.meta.url)),'@skillcheck/lsp':fileURLToPath(new URL('./packages/lsp/src/index.ts',import.meta.url))}},test:{include:['tests/**/*.test.ts'],testTimeout:15000}});
